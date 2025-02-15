@@ -14,15 +14,16 @@
 This repository contains code for the paper **ReAL**, focusing on detecting reflective surface interference in LiDAR readings. Our approach employs a machine learning-based system for real-time detection of reflective interference on resource-constrained devices.
 
 <p align='center'>
-  <img src='images/Attack-Overview-Figure.png' width='700'/>
+  <img src='images/AttackOverview-v2.png' width='700'/>
 </p>
 ---
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Scenarios](#scenarios)
 - [Dataset](#dataset)
-- [Experiments](#experiments)
+- [Result](#result)
 - [References](#references)
 
 ---
@@ -44,7 +45,7 @@ Jetson Orion Nano (for resource-constrained testing)
 LiDAR sensor (RPLiDAR A1M8-R6 recommended)
 Make sure to set up the hardware and sensor according to the manufacturer’s guidelines.
 
-Usage
+##Usage
 To begin detecting reflective attacks on LiDAR data:
 
 Set up the LiDAR sensor and prepare your testing environment using requirement.txt
@@ -54,15 +55,27 @@ python detect_reflective_attack.py --input data/lidar_data.csv --model checkpoin
 ```
 This command initiates real-time interference detection using the specified model and input dataset.
 
+## Scenarios
+Scenario 1: Four objects were placed 15 mm from the LiDAR at a 0° angle, scanned 25,000 times under normal and reflective surface conditions, totaling 200,000 scans. This scenario establishes a baseline for how reflections affect LiDAR measurements at a fixed distance and angle.
+
+Scenario 2: A single object was positioned at five different angles (52°–317°) and distances (16.6–29.6 cm). Each position underwent 50,000 scans (normal and reflective), resulting in 250,000 scans. This scenario examines how angle and positioning impact reflective interference.
+
+Scenario 3: Two objects were placed at 0° and 90°, and tested in four covered/uncovered combinations (N/N, N/S, S/N, S/S), each scanned 25,000 times. Object positions were swapped and repeated across two object sets, leading to 400,000 scans. This scenario simulates real-world conditions with multiple reflective surfaces.
+
 ## Dataset
 We used RpLidar to collect and gather data can be found in the folder Data.
 
-## Experiments
-We conducted controlled experiments to assess the accuracy and response time on reflective surface detection. The repository includes configurations for replication or further experimentation.
-
-See experiments/README.md for setup details.
-
 ## Result
+Our Trained model performed better and below are the inference results we achieved in detecting reflective attacks using the Jetson Orin device.
+### Inference Performance of the Defense Model on Jetson Orion
+| Scenario   | Inference Accuracy (%) | F1-Score | Latency (ms) |
+|------------|------------------------|----------|--------------|
+| Scenario 1 | 92.71                   | 92.70    | 2.763        |
+| Scenario 2 | 95.53                   | 95.52    | 4.727        |
+| Scenario 3 | 99.97                   | 99.97    | 0.083        |
+
+## Q&A
+Questions are welcome via asolanki42@tntech.edu
 
 
 ## License
