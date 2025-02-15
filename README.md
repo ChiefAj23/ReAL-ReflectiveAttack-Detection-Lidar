@@ -11,8 +11,11 @@
 ---
 
 ## Overview
-This repository contains code and resources for the project **ReAL**, focusing on detecting reflective surface interference in LiDAR readings. Our approach employs a machine learning-based system for real-time detection of reflective interference on resource-constrained devices.
+This repository contains code for the paper **ReAL**, focusing on detecting reflective surface interference in LiDAR readings. Our approach employs a machine learning-based system for real-time detection of reflective interference on resource-constrained devices.
 
+<p align='center'>
+  <img src='images/Attack-Overview-Figure.png' width='700'/>
+</p>
 ---
 
 ## Table of Contents
@@ -44,7 +47,7 @@ Make sure to set up the hardware and sensor according to the manufacturer’s gu
 Usage
 To begin detecting reflective attacks on LiDAR data:
 
-Set up the LiDAR sensor and prepare your testing environment, ensuring all necessary safety protocols are followed.
+Set up the LiDAR sensor and prepare your testing environment using requirement.txt
 Run the detection command with preprocessed LiDAR data:
 ```bash
 python detect_reflective_attack.py --input data/lidar_data.csv --model checkpoints/svm_model.pkl
@@ -52,15 +55,15 @@ python detect_reflective_attack.py --input data/lidar_data.csv --model checkpoin
 This command initiates real-time interference detection using the specified model and input dataset.
 
 ## Dataset
-For instructions on preparing and structuring data, see the data/README.md.
+We used RpLidar to collect and gather data can be found in the folder Data.
 
 ## Experiments
 We conducted controlled experiments to assess the accuracy and response time on reflective surface detection. The repository includes configurations for replication or further experimentation.
 
 See experiments/README.md for setup details.
 
-## References
-Relevant references are included in the paper.
+## Result
+
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
