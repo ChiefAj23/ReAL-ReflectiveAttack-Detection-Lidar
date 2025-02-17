@@ -1,5 +1,5 @@
 
-# ReAL: Machine Learning Detection of Reflective Attacks against Lidarometry
+# ReAL: Machine Learning Detection of Reflective Attacks against Lidarometry (Accepted in IEEE SoutheastCon 2025)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.7+-green.svg)](https://www.python.org/)
