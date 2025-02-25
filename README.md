@@ -16,7 +16,7 @@ This repository contains code for the paper **ReAL**, focusing on detecting refl
 <p align='center'>
   <img src='images/AttackOverview-v2.png' width='700'/>
 </p>
----
+
 
 ## Table of Contents
 - [Installation](#installation)
