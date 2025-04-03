@@ -79,8 +79,7 @@ Questions are welcome via asolanki42@tntech.edu,lpbeirne@coastal.edu, and walami
 
 ## Acknowledgement
 This research is partially supported by the Tennessee Tech
-University’s Center for Manufacturing Research, National Sci-
-ence Foundation Grant (NSF-REU 2349104)
+University’s Center for Manufacturing Research, National Science Foundation Grant (NSF-REU 2349104)
 
 
 ## License
