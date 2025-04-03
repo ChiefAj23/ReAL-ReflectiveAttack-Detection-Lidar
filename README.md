@@ -1,5 +1,5 @@
 
-# ReAL: Machine Learning Detection of Reflective Attacks against Lidarometry (Accepted in IEEE SoutheastCon 2025)
+# ReAL: Machine Learning Detection of Reflective Attacks against Lidarometry (Published in IEEE SoutheastCon 2025) (Presented in SoutheastCon 2025 Conference by Abhijeet Solanki)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.7+-green.svg)](https://www.python.org/)
@@ -75,7 +75,12 @@ Our Trained model performed better and below are the inference results we achiev
 | Scenario 3 | 99.97                   | 99.97    | 0.083        |
 
 ## Q&A
-Questions are welcome via asolanki42@tntech.edu
+Questions are welcome via asolanki42@tntech.edu,lpbeirne@coastal.edu, and walamiri@tntech.edu
+
+## Acknowledgement
+This research is partially supported by the Tennessee Tech
+University’s Center for Manufacturing Research, National Sci-
+ence Foundation Grant (NSF-REU 2349104)
 
 
 ## License
