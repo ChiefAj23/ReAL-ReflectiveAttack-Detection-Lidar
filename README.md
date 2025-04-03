@@ -4,8 +4,8 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.7+-green.svg)](https://www.python.org/)
 
-**Authors**: Abhijeet Solanki<sup>1</sup>, Luke Beirne<sup>2</sup>, Syed Rafay Hasan<sup>3</sup>, Wesam Alamiri<sup>3</sup>  
-<sup>1</sup>Department of Electrical and Computer Engineering, Tennessee Technological University  
+**Authors**: Abhijeet Solanki<sup>1</sup>, Luke Beirne<sup>2</sup>, Syed Rafay Hasan<sup>3</sup>, Wesam Alamiri<sup>4</sup>  
+<sup>1,3,4</sup>Department of Electrical and Computer Engineering, Tennessee Technological University  
 <sup>2</sup>Department of Computing Sciences, Coastal Carolina University
 
 ---
