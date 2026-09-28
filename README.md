@@ -2,7 +2,7 @@
 # ReAL: Machine Learning Detection of Reflective Attacks against Lidarometry (Published in IEEE SoutheastCon 2025) (Presented in SoutheastCon 2025 Conference by Abhijeet Solanki)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.7+-green.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.10+-green.svg)](https://www.python.org/)
 [![Paper](https://img.shields.io/badge/Paper-IEEE%20Xplore-00629B.svg)](https://doi.org/10.1109/SoutheastCon56624.2025.10971487)
 
 **Authors**: Abhijeet Solanki<sup>1</sup>, Luke Beirne<sup>2</sup>, Syed Rafay Hasan<sup>3</sup>, Wesam Alamiri<sup>4</sup>  
@@ -41,20 +41,21 @@ cd ReAL-ReflectiveAttack-Detection-Lidar
 pip install -r requirements.txt
 ```
 ## Requirements
-Python 3.7+
-Jetson Orion Nano (for resource-constrained testing)
-LiDAR sensor (RPLiDAR A1M8-R6 recommended)
-Make sure to set up the hardware and sensor according to the manufacturer’s guidelines.
+- Python 3.10+ (the pinned NumPy 2.2 needs it)
+- Jetson Orin Nano (for resource-constrained testing)
+- LiDAR sensor (RPLiDAR A1M8-R6 recommended)
 
-##Usage
-To begin detecting reflective attacks on LiDAR data:
+Set up the hardware and sensor according to the manufacturer’s guidelines.
 
-Set up the LiDAR sensor and prepare your testing environment using requirement.txt
-Run the detection command with preprocessed LiDAR data:
+## Usage
+Each experiment has its scripts in `Code/Experiment-N` and its scans in `Data/Experiment-N(Scenario-N)`. The training scripts read the CSV files by name, so run them from the matching data folder. For Scenario 1:
+
 ```bash
-python detect_reflective_attack.py --input data/lidar_data.csv --model checkpoints/svm_model.pkl
+cd "Data/Experiment-1(Scenario-1)"
+python ../../Code/Experiment-1/Ex1_Final.py
 ```
-This command initiates real-time interference detection using the specified model and input dataset.
+
+This trains the RBF-kernel SVM (gamma 100), saves the model next to the data, and prints accuracy, F1 and inference latency for the test split and the held-out inference scans (also written to `svm_ex1_gamma_results.csv`). Trained models are also included in `Pre-Trained Model/`. Some inference scripts load their model and data from absolute paths set at the top of the file; point those at your copies before running them.
 
 ## Scenarios
 Scenario 1: Four objects were placed 15 mm from the LiDAR at a 0° angle, scanned 25,000 times under normal and reflective surface conditions, totaling 200,000 scans. This scenario establishes a baseline for how reflections affect LiDAR measurements at a fixed distance and angle.
@@ -64,11 +65,11 @@ Scenario 2: A single object was positioned at five different angles (52°–317�
 Scenario 3: Two objects were placed at 0° and 90°, and tested in four covered/uncovered combinations (N/N, N/S, S/N, S/S), each scanned 25,000 times. Object positions were swapped and repeated across two object sets, leading to 400,000 scans. This scenario simulates real-world conditions with multiple reflective surfaces.
 
 ## Dataset
-We used RpLidar to collect and gather data can be found in the folder Data.
+The RPLiDAR scans for every scenario are in the `Data` folder, one subfolder per experiment.
 
 ## Result
-Our Trained model performed better and below are the inference results we achieved in detecting reflective attacks using the Jetson Orin device.
-### Inference Performance of the Defense Model on Jetson Orion
+Inference results for detecting reflective attacks on the Jetson Orin:
+### Inference Performance of the Defense Model on Jetson Orin
 | Scenario   | Inference Accuracy (%) | F1-Score | Latency (ms) |
 |------------|------------------------|----------|--------------|
 | Scenario 1 | 92.71                   | 92.70    | 2.763        |
@@ -82,6 +83,9 @@ Questions are welcome via asolanki42@tntech.edu,lpbeirne@coastal.edu, and walami
 This research is partially supported by the Tennessee Tech
 University’s Center for Manufacturing Research, National Science Foundation Grant (NSF-REU 2349104)
 
+
+## References
+A. Solanki, L. Beirne, S. R. Hasan and W. Alamiri, "ReAL: Machine Learning Detection of Reflective Attacks against Lidarometry," *IEEE SoutheastCon 2025*. [doi:10.1109/SoutheastCon56624.2025.10971487](https://doi.org/10.1109/SoutheastCon56624.2025.10971487)
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
