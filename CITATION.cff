@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "ReAL: Machine Learning Detection of Reflective Attacks Against Lidarometry"
+type: software
+license: MIT
+repository-code: "https://github.com/ChiefAj23/ReAL-ReflectiveAttack-Detection-Lidar"
+authors:
+  - family-names: "Solanki"
+    given-names: "Abhijeet"
+    affiliation: "Tennessee Technological University"
+  - family-names: "Beirne"
+    given-names: "Luke"
+    affiliation: "Coastal Carolina University"
+  - family-names: "Hasan"
+    given-names: "Syed Rafay"
+    affiliation: "Tennessee Technological University"
+  - family-names: "Al Amiri"
+    given-names: "Wesam"
+    affiliation: "Tennessee Technological University"
+preferred-citation:
+  type: conference-paper
+  title: "ReAL: Machine Learning Detection of Reflective Attacks Against Lidarometry"
+  authors:
+    - family-names: "Solanki"
+      given-names: "Abhijeet"
+      affiliation: "Tennessee Technological University"
+    - family-names: "Beirne"
+      given-names: "Luke"
+      affiliation: "Coastal Carolina University"
+    - family-names: "Hasan"
+      given-names: "Syed Rafay"
+      affiliation: "Tennessee Technological University"
+    - family-names: "Al Amiri"
+      given-names: "Wesam"
+      affiliation: "Tennessee Technological University"
+  collection-title: "SoutheastCon 2025"
+  publisher:
+    name: "IEEE"
+  year: 2025
+  month: 3
+  start: 1309
+  end: 1313
+  doi: "10.1109/SoutheastCon56624.2025.10971487"
